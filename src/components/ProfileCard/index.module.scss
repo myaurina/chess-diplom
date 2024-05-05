@@ -1,0 +1,57 @@
+.profileCard {
+  background-color: var(--block-bg);
+  border-radius: var(--standart-radius);
+  padding: 24px 16px;
+  min-height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    padding: 20px 12px;
+  }
+  @media (max-width: 576px) {
+    flex-direction: column;
+  }
+  @media (max-width: 480px) {
+    padding: 16px 10px;
+  }
+}
+
+.profileCardAvatar {
+  max-width: 150px;
+  min-width: 150px;
+  max-height: 150px;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--block-bg-secondary);
+  @media (max-width: 576px) {
+    align-self: center;
+  }
+}
+
+.profileCardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profileCardName {
+  display: flex;
+  gap: 4px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.profileCardAge {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.profileCardDescription {
+  font-size: 20px;
+}

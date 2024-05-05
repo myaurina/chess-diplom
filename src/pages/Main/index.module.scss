@@ -1,0 +1,23 @@
+.mainWrapper {
+
+}
+
+.mainContent {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 24px;
+  @media (max-width: 768px) {
+    gap: 16px;
+  }
+  @media (max-width: 480px) {
+    gap: 12px;
+  }
+}
+
+.mainNavigationLinks {
+  background-color: var(--block-bg);
+  border-radius: var(--standart-radius);
+  padding: 24px 16px;
+  min-height: 100%;
+}

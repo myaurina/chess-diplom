@@ -1,0 +1,11 @@
+export { default as Input } from "./Input";
+export { default as Button } from "./Button";
+export { default as Header } from "./Header";
+export { default as Footer } from "./Footer";
+export { default as BoardComponent } from "./BoardComponent";
+export { default as CellComponent } from "./CellComponent";
+export { default as LostFigures } from "./LostFigures";
+export { default as ProfileCard } from "./ProfileCard";
+export { default as ChessRules } from "./ChessRules";
+export { default as LoginForm } from "./LoginForm";
+export { default as RegistrationForm } from "./RegistrationForm";

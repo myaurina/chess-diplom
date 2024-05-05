@@ -1,0 +1,57 @@
+.loginForm {
+  max-width: 640px;
+  margin: 0 auto;
+  background-color: var(--block-bg);
+  border-radius: var(--standart-radius);
+  padding: 32px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    padding: 20px 12px;
+  }
+  @media (max-width: 576px) {
+    flex-direction: column;
+  }
+  @media (max-width: 480px) {
+    padding: 16px 10px;
+  }
+}
+
+.loginFormInner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.loginFormH1 {
+  margin: 0;
+  text-align: center;
+  font-size: 32px;
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+  @media (max-width: 480px) {
+    font-size: 20px;
+  }
+}
+
+.loginFormFormControl {
+  width: 100%;
+}
+.loginFormFormButton {
+  padding: 16px 12px;
+  font-weight: 600;
+  transition: background-color var(--transition-duration) ease,
+    color var(--transition-duration) ease;
+  &:hover {
+    background-color: var(--main-color-hover);
+    color: var(--block-bg);
+  }
+}
+
+.loginFormLink {
+  color: var(--main-color-hover);
+}

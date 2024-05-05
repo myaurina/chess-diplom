@@ -1,0 +1,67 @@
+.gameHotseatWrapper {
+  .gameHotseatInner {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: stretch;
+    max-width: 920px;
+    margin: 0 auto;
+    gap: 24px;
+    @media (max-width: 1200px) {
+      gap: 16px;
+    }
+    @media (max-width: 768px) {
+      gap: 12px;
+    }
+    @media (max-width: 480px) {
+      gap: 8px;
+    }
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      max-width: 640px;
+    }
+  }
+
+  .gameHotseatTitle {
+    margin: 0;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .lostFiguresWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+    min-width: 240px;
+    & > div {
+      flex: 1;
+    }
+    @media (max-width: 1024px) {
+      flex-direction: row;
+    }
+    @media (max-width: 768px) {
+      gap: 12px;
+    }
+    @media (max-width: 480px) {
+      gap: 8px;
+    }
+  }
+
+  .restartButton {
+    background-color: var(--block-bg);
+    font-weight: 600;
+  }
+
+  .gameHotseatInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    @media (max-width: 768px) {
+      gap: 12px;
+    }
+    @media (max-width: 480px) {
+      gap: 8px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.inputWrapper {
+  display: flex;  
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  color: var(--main-color);
+  font-size: 18px;
+  font-weight: 500;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.input {
+  font-size: 16px;
+  padding: 16px 16px 16px 8px;
+  color: var(--main-color);
+  background-color: var(--block-bg-secondary);
+  border: 1px solid var(--gray-color);
+  border-radius: var(--standart-radius);
+}

@@ -1,0 +1,223 @@
+.header {
+  height: var(--header-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--block-bg);
+}
+
+.headerInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 8px 16px;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  @media (max-width: 576px) {
+    gap: 8px;
+  }
+}
+
+.headerLogoWrapper {
+  max-height: 60px;
+  max-width: 100%;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  span {
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  img {
+    object-fit: contain;
+    width: auto;
+  }
+
+  @media (max-width: 768px) {
+    img {
+      height: 48px;
+    }
+    span {
+      font-size: 20px;
+    }
+  }
+  @media (max-width: 576px) {
+    // flex-direction: column;
+    gap: 4px;
+    img {
+      height: 40px;
+    }
+    span {
+      font-size: 14px;
+    }
+    .headerLogoUnivercityName {
+      display: none;
+    }
+  }
+}
+
+.headerLogo {
+  max-height: 60px;
+  width: 60px;
+  object-fit: cover;
+}
+
+.headerNav {
+}
+
+.headerLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  border-radius: var(--standart-radius);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 8px 12px;
+  transition: color var(--transition-duration) ease,
+    transform var(--transition-duration) ease;
+
+  &:hover {
+    color: var(--main-color-hover);
+    transform: scale(1.01);
+  }
+
+  @media (max-width: 576px) {
+    font-size: 14px;
+  }
+}
+
+.headerButtonBurger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  max-width: 60px;
+  max-height: 60px;
+  min-width: 60px;
+  min-height: 60px;
+  border: none;
+  background-color: var(--white);
+  cursor: pointer;
+  transition: color var(--transition-duration) ease,
+    background-color var(--transition-duration) ease;
+
+  &:hover {
+    color: var(--main-color-hover);
+    background-color: var(--block-bg-secondary);
+  }
+
+  @media (max-width: 1024px) {
+    display: flex;
+  }
+
+  @media (max-width: 576px) {
+    max-width: 48px;
+    max-height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    svg {
+      width: 32px;
+    }
+  }
+}
+
+.headerBurger,
+.headerBurgerX {
+  display: none;
+
+  @media (max-width: 1024px) {
+    &Active {
+      display: flex;
+    }
+  }
+}
+
+.headerNavList {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  list-style-type: none;
+  @media (max-width: 576px) {
+    gap: 8px;
+  }
+  @media (max-width: 375px) {
+    gap: 6px;
+  }
+}
+
+.headerNavListItem {
+}
+
+.headerNavWrapper {
+  @media (max-width: 1024px) {
+    display: none;
+    &Active {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: var(--header-height);
+      background-color: var(--block-bg);
+      left: 0;
+      width: 100dvw;
+      padding: 20px;
+      z-index: 99;
+      box-shadow: 0px 8px 6px 4px rgba(80, 80, 80, 0.1);
+    }
+  }
+  @media (max-width: 768px) {
+    padding: 12px 20px;
+    &Active {
+      width: 100%;
+      nav {
+        width: 100%;
+      }
+      .headerNavList {
+        justify-content: flex-start;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.headerLogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+  color: var(--main-color);
+  padding: 8px 12px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color var(--transition-duration) ease;
+
+  @media (max-width: 576px) {
+    font-size: 14px;
+  }
+
+  &:hover {
+    color: var(--main-color-hover);
+    .headerLoginLogo {
+      fill: var(--main-color-hover);
+    }
+  }
+}
+
+.headerLoginLogo {
+  width: 24px;
+  height: auto;
+  transition: fill var(--transition-duration) ease;
+}

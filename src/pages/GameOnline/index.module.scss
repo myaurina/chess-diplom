@@ -1,0 +1,13 @@
+.inDevelopmentH1 {
+  font-size: 48px;
+  margin-top: 10vh;
+  text-align: center;
+  opacity: 0.5;
+
+  @media (max-width: 768px) {
+    font-size: 40px;
+  }
+  @media (max-width: 480px) {
+    font-size: 36px;
+  }
+}
