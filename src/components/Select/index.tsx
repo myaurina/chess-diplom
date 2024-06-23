@@ -1,5 +1,5 @@
-import { useId, type FC, ChangeEvent } from "react";
-import style from "./index.module.scss";
+import { useId, type FC, ChangeEvent } from 'react';
+import style from './index.module.scss';
 
 interface ISelectProps {
   value: string;
@@ -8,19 +8,9 @@ interface ISelectProps {
   label?: string;
   name?: string;
   id?: string;
-  placeholder?: string;
 }
 
-const Select: FC<ISelectProps> = ({
-  value,
-  onChange,
-  options,
-  label,
-  name,
-  id,
-  placeholder,
-  ...rest
-}) => {
+const Select: FC<ISelectProps> = ({ value, onChange, options, label, name, id, ...rest }) => {
   const uniqueId = useId();
 
   return (
@@ -36,9 +26,7 @@ const Select: FC<ISelectProps> = ({
         onChange={onChange}
         id={id ?? `select-${uniqueId}`}
         name={name ?? `name-${uniqueId}`}
-        placeholder={placeholder ?? ""}
-        {...rest}
-      >
+        {...rest}>
         {options.map((option) => (
           <option value={option.value} key={option.value}>
             {option.label}
